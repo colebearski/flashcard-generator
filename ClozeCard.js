@@ -1,28 +1,26 @@
-// inquirer
-var inquirer = require("inquirer");
+// fs
+var fs = require("fs");
 
-function ClozeCard (text, answer) {
+// export
+module.exports = ClozeCard;
 
-}
+// requirement for data
+var clozeData = require("./CoolCards.json");
 
-
-
-/*
-// constructor function for flashcards
+// constructor for creation
 function ClozeCard(text, cloze) {
 	this.text = text;
 	this.cloze = cloze;
+	// text is our question, cloze is our answer. this replaces the answer with ____
+	this.clozeDelete = this.text.replace(this.cloze, '_____');
+	this.create = function () {
+
+		var data = {
+			text: this.text,
+			cloze: this.cloze,
+			clozeDelete: this.clozeDelete,
+			type: "cloze"
+		};
+	}
 }
 
-var firstPresidentCloze = new ClozeCard
-	("George Washington was the first president of the United States.", "George Washington");
-
-	// George ....
-	console.log(firstPresidentCloze.cloze);
-	// .... was the first .....
-	console.log(firstPresidentCloze.partial); 
-	// george was the fist pres....
-	console.log(firstPresidentCloze.fullText);
-	// broken 
-	var brokenCloze = new ClozeCard ("This doesn't work", "oops");
-*/
