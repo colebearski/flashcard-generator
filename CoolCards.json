@@ -8,5 +8,10 @@
 		"text": "Ryan Dungey used to ride KTM RedBull before retirement.",
 		"cloze": "Ryan Dungey",
 		"clozeDelete": "_____ used to ride KTM RedBull before retirement."
+	},
+	{
+		"text": "Give me fuel, give me fire.",
+		"cloze": "fuel",
+		"clozeDelete": "Give me _____, give me fire."
 	}
 ]

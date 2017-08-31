@@ -123,3 +123,58 @@ var addCard = function () {
 	})
 }
 
+// show cards
+var showCards = function () {
+	// select which type of cards to see
+	inquirer.prompt([{
+		name: "flashcardType",
+		message: "Would you like Cloze or Basic flashcards?",
+		type: "list",
+		choices: [{
+			name: "Cloze"
+		}, {
+			name: "Basic"
+		}]
+		// once we specify we can then display
+	}]).then(function(cardList) {
+		if (cardList.flashcardType === "Cloze") {
+			// read our file
+			fs.readFile('./CoolCards.json', 'utf8', function(error, data) {
+				// log error if..
+				if (error) {
+					console.log("Cloze Error: " + error);
+				};
+				// here we go
+				console.log(data);
+			})
+		} else if (cardList.flashcardType === "Basic") {
+			fs.readFile('./NormalCards.json', 'utf8', function(error, data) {
+				if (error) {
+					console.log(error);
+				};
+				console.log(data);
+			})
+		};
+	})
+}
+
+// console.log the error in cloze if applicable
+// format show cards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
